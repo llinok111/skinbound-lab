@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>skinbound-lab — LBS vs dual-quaternion sweep certificate</title>
+<style>
+  :root { color-scheme: dark; }
+  body { margin: 0; font: 13px/1.45 ui-monospace, SFMono-Regular, Menlo, monospace; background: #0b0d10; color: #d6dde6; }
+  #app { display: flex; height: 100vh; }
+  #view { flex: 1 1 auto; min-width: 0; position: relative; }
+  #hud { width: 430px; flex: 0 0 auto; padding: 10px 14px; overflow-y: auto; border-left: 1px solid #1d232b; background: #0e1116; }
+  h1 { font-size: 14px; margin: 0 0 8px; color: #fff; }
+  table { border-collapse: collapse; width: 100%; margin: 6px 0 10px; }
+  td, th { text-align: left; padding: 2px 6px 2px 0; border-bottom: 1px solid #171d24; }
+  th { color: #8b98a6; font-weight: 500; }
+  .ok { color: #56d364; } .bad { color: #ff7b72; } .num { color: #79c0ff; }
+  label { display: block; margin: 8px 0 2px; color: #8b98a6; }
+  select, input[type=range] { width: 100%; }
+  .note { color: #8b98a6; margin-top: 10px; }
+  .tag { display: inline-block; padding: 1px 5px; border: 1px solid #30363d; border-radius: 3px; color: #8b98a6; }
+</style>
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.169.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.169.0/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+<div id="app">
+  <div id="view"></div>
+  <div id="hud">
+    <h1>skinbound-lab <span class="tag">LBS (left) vs DQS (right)</span></h1>
+    <div>Live numbers below are computed <b>in this page</b> by the same <code>src/core.mjs</code> that <code>bench/verify.mjs</code> imports, then differenced against the numbers node baked into <code>data/reference.json</code>.</div>
+    <label for="scn">scenario</label>
+    <select id="scn"></select>
+    <label for="t">sweep parameter t <span id="tval"></span></label>
+    <input id="t" type="range" min="0" max="1" step="0.001" value="1" />
+    <table id="live"></table>
+    <div id="cmp"></div>
+    <div class="note" id="limits"></div>
+  </div>
+</div>
+<script type="module" src="./main.js"></script>
+</body>
+</html>

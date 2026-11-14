@@ -1,0 +1,1725 @@
+{
+ "generator": "tools/gen-sample.mjs",
+ "schema": "skinbound/reference@1",
+ "scales": [
+  0.000001,
+  0.001,
+  1,
+  1000,
+  1000000
+ ],
+ "scenarios": [
+  {
+   "id": "twist2-60",
+   "bones": 2,
+   "L": 1,
+   "radius": 0.35,
+   "perBone": 9,
+   "seg": 32,
+   "blend": 0.25,
+   "pureTwist": true,
+   "analyticMaxShrink": 0.133974596216,
+   "keys": [
+    {
+     "t": 0,
+     "twist": [
+      0,
+      0
+     ],
+     "bend": [
+      0,
+      0
+     ]
+    },
+    {
+     "t": 1,
+     "twist": [
+      0,
+      60
+     ],
+     "bend": [
+      0,
+      0
+     ]
+    }
+   ],
+   "jointRings": [
+    {
+     "ring": 8,
+     "child": 1
+    }
+   ],
+   "sweep": {
+    "lbsShrink": {
+     "lower": 0.133974596216,
+     "upper": 0.133982236814,
+     "relWidth": 0.0000570302,
+     "evals": 44
+    },
+    "dqsShrink": {
+     "lower": 6.66133814775e-16,
+     "upper": 6.66174472357e-16,
+     "relWidth": 0.0000610352,
+     "evals": 284
+    },
+    "lbsVolume": {
+     "lower": 0.963148129013,
+     "upper": 0.963148129013,
+     "relWidth": 0,
+     "evals": 90
+    },
+    "dqsVolume": {
+     "lower": 0.994624504188,
+     "upper": 0.994624504188,
+     "relWidth": 0,
+     "evals": 90
+    }
+   },
+   "oracle": [
+    {
+     "t": 0.25,
+     "child": 1,
+     "thetaDeg": 15,
+     "measuredRatio": 0.991444861374,
+     "predictedLBSratio": 0.991444861374,
+     "measuredLBSangleDeg": 7.5,
+     "predictedLBSangleDeg": 7.5,
+     "measuredDQSRatio": 1,
+     "measuredDQSangleDeg": 7.5,
+     "predictedDQSangleDeg": 7.5,
+     "ratioAbsErr": 0,
+     "angleAbsErr": 0
+    },
+    {
+     "t": 0.5,
+     "child": 1,
+     "thetaDeg": 30,
+     "measuredRatio": 0.965925826289,
+     "predictedLBSratio": 0.965925826289,
+     "measuredLBSangleDeg": 15,
+     "predictedLBSangleDeg": 15,
+     "measuredDQSRatio": 1,
+     "measuredDQSangleDeg": 15,
+     "predictedDQSangleDeg": 15,
+     "ratioAbsErr": 0,
+     "angleAbsErr": 0
+    },
+    {
+     "t": 0.75,
+     "child": 1,
+     "thetaDeg": 45,
+     "measuredRatio": 0.923879532511,
+     "predictedLBSratio": 0.923879532511,
+     "measuredLBSangleDeg": 22.5,
+     "predictedLBSangleDeg": 22.5,
+     "measuredDQSRatio": 1,
+     "measuredDQSangleDeg": 22.5,
+     "predictedDQSangleDeg": 22.5,
+     "ratioAbsErr": 0,
+     "angleAbsErr": 0
+    },
+    {
+     "t": 1,
+     "child": 1,
+     "thetaDeg": 60,
+     "measuredRatio": 0.866025403784,
+     "predictedLBSratio": 0.866025403784,
+     "measuredLBSangleDeg": 30,
+     "predictedLBSangleDeg": 30,
+     "measuredDQSRatio": 1,
+     "measuredDQSangleDeg": 30,
+     "predictedDQSangleDeg": 30,
+     "ratioAbsErr": 0,
+     "angleAbsErr": 0
+    }
+   ],
+   "samples": [
+    {
+     "t": 0,
+     "lbsShrink": 0,
+     "dqsShrink": 0,
+     "lbsVol": 1,
+     "dqsVol": 1
+    },
+    {
+     "t": 0.0625,
+     "lbsShrink": 0.000535412523635,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.999715603065,
+     "dqsVol": 0.999852987471
+    },
+    {
+     "t": 0.125,
+     "lbsShrink": 0.0021410767614,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.999132032006,
+     "dqsVol": 0.999680576691
+    },
+    {
+     "t": 0.1875,
+     "lbsShrink": 0.0048152733278,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.998251785766,
+     "dqsVol": 0.999482816095
+    },
+    {
+     "t": 0.25,
+     "lbsShrink": 0.00855513862619,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.997078633693,
+     "dqsVol": 0.999259752422
+    },
+    {
+     "t": 0.3125,
+     "lbsShrink": 0.0133566679151,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.995617599404,
+     "dqsVol": 0.999011430812
+    },
+    {
+     "t": 0.375,
+     "lbsShrink": 0.0192147195968,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.993874939273,
+     "dqsVol": 0.998737894897
+    },
+    {
+     "t": 0.4375,
+     "lbsShrink": 0.0261230207227,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.991858115637,
+     "dqsVol": 0.998439186905
+    },
+    {
+     "t": 0.5,
+     "lbsShrink": 0.0340741737109,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.989575764846,
+     "dqsVol": 0.99811534777
+    },
+    {
+     "t": 0.5625,
+     "lbsShrink": 0.0430596642678,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.987037660276,
+     "dqsVol": 0.997766417252
+    },
+    {
+     "t": 0.625,
+     "lbsShrink": 0.0530698705049,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.98425467048,
+     "dqsVol": 0.997392434063
+    },
+    {
+     "t": 0.6875,
+     "lbsShrink": 0.0640940732427,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.981238712648,
+     "dqsVol": 0.996993436013
+    },
+    {
+     "t": 0.75,
+     "lbsShrink": 0.0761204674887,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.978002701574,
+     "dqsVol": 0.996569460164
+    },
+    {
+     "t": 0.8125,
+     "lbsShrink": 0.0891361750788,
+     "dqsShrink": 4.4408920985e-16,
+     "lbsVol": 0.974560494355,
+     "dqsVol": 0.996120543005
+    },
+    {
+     "t": 0.875,
+     "lbsShrink": 0.103127258467,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.97092683105,
+     "dqsVol": 0.995646720645
+    },
+    {
+     "t": 0.9375,
+     "lbsShrink": 0.118078735652,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.967117271563,
+     "dqsVol": 0.995148029032
+    },
+    {
+     "t": 1,
+     "lbsShrink": 0.133974596216,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.963148129013,
+     "dqsVol": 0.994624504188
+    }
+   ]
+  },
+  {
+   "id": "twist2-90",
+   "bones": 2,
+   "L": 1,
+   "radius": 0.35,
+   "perBone": 9,
+   "seg": 32,
+   "blend": 0.25,
+   "pureTwist": true,
+   "analyticMaxShrink": 0.292893218813,
+   "keys": [
+    {
+     "t": 0,
+     "twist": [
+      0,
+      0
+     ],
+     "bend": [
+      0,
+      0
+     ]
+    },
+    {
+     "t": 1,
+     "twist": [
+      0,
+      90
+     ],
+     "bend": [
+      0,
+      0
+     ]
+    }
+   ],
+   "jointRings": [
+    {
+     "ring": 8,
+     "child": 1
+    }
+   ],
+   "sweep": {
+    "lbsShrink": {
+     "lower": 0.292893218813,
+     "upper": 0.292909456369,
+     "relWidth": 0.0000554385,
+     "evals": 44
+    },
+    "dqsShrink": {
+     "lower": 6.66133814775e-16,
+     "upper": 6.66174472357e-16,
+     "relWidth": 0.0000610352,
+     "evals": 93
+    },
+    "lbsVolume": {
+     "lower": 0.92779835618,
+     "upper": 0.92779835618,
+     "relWidth": 0,
+     "evals": 119
+    },
+    "dqsVolume": {
+     "lower": 0.989546906393,
+     "upper": 0.989546906393,
+     "relWidth": 0,
+     "evals": 87
+    }
+   },
+   "oracle": [
+    {
+     "t": 0.25,
+     "child": 1,
+     "thetaDeg": 22.5,
+     "measuredRatio": 0.980785280403,
+     "predictedLBSratio": 0.980785280403,
+     "measuredLBSangleDeg": 11.25,
+     "predictedLBSangleDeg": 11.25,
+     "measuredDQSRatio": 1,
+     "measuredDQSangleDeg": 11.25,
+     "predictedDQSangleDeg": 11.25,
+     "ratioAbsErr": 0,
+     "angleAbsErr": 0
+    },
+    {
+     "t": 0.5,
+     "child": 1,
+     "thetaDeg": 45,
+     "measuredRatio": 0.923879532511,
+     "predictedLBSratio": 0.923879532511,
+     "measuredLBSangleDeg": 22.5,
+     "predictedLBSangleDeg": 22.5,
+     "measuredDQSRatio": 1,
+     "measuredDQSangleDeg": 22.5,
+     "predictedDQSangleDeg": 22.5,
+     "ratioAbsErr": 0,
+     "angleAbsErr": 0
+    },
+    {
+     "t": 0.75,
+     "child": 1,
+     "thetaDeg": 67.5,
+     "measuredRatio": 0.831469612303,
+     "predictedLBSratio": 0.831469612303,
+     "measuredLBSangleDeg": 33.75,
+     "predictedLBSangleDeg": 33.75,
+     "measuredDQSRatio": 1,
+     "measuredDQSangleDeg": 33.75,
+     "predictedDQSangleDeg": 33.75,
+     "ratioAbsErr": 0,
+     "angleAbsErr": 0
+    },
+    {
+     "t": 1,
+     "child": 1,
+     "thetaDeg": 90,
+     "measuredRatio": 0.707106781187,
+     "predictedLBSratio": 0.707106781187,
+     "measuredLBSangleDeg": 45,
+     "predictedLBSangleDeg": 45,
+     "measuredDQSRatio": 1,
+     "measuredDQSangleDeg": 45,
+     "predictedDQSangleDeg": 45,
+     "ratioAbsErr": 0,
+     "angleAbsErr": 0
+    }
+   ],
+   "samples": [
+    {
+     "t": 0,
+     "lbsShrink": 0,
+     "dqsShrink": 0,
+     "lbsVol": 1,
+     "dqsVol": 1
+    },
+    {
+     "t": 0.0625,
+     "lbsShrink": 0.00120454379483,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.999461088045,
+     "dqsVol": 0.999769953795
+    },
+    {
+     "t": 0.125,
+     "lbsShrink": 0.0048152733278,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.998251785766,
+     "dqsVol": 0.999482816095
+    },
+    {
+     "t": 0.1875,
+     "lbsShrink": 0.0108234900352,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.996383739406,
+     "dqsVol": 0.999138746098
+    },
+    {
+     "t": 0.25,
+     "lbsShrink": 0.0192147195968,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.993874939273,
+     "dqsVol": 0.998737894897
+    },
+    {
+     "t": 0.3125,
+     "lbsShrink": 0.0299687468055,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.990749546482,
+     "dqsVol": 0.998280406219
+    },
+    {
+     "t": 0.375,
+     "lbsShrink": 0.0430596642678,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.987037660276,
+     "dqsVol": 0.997766417252
+    },
+    {
+     "t": 0.4375,
+     "lbsShrink": 0.058455934817,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.982775028148,
+     "dqsVol": 0.997196059564
+    },
+    {
+     "t": 0.5,
+     "lbsShrink": 0.0761204674887,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.978002701574,
+     "dqsVol": 0.996569460164
+    },
+    {
+     "t": 0.5625,
+     "lbsShrink": 0.0960107068766,
+     "dqsShrink": 4.4408920985e-16,
+     "lbsVol": 0.97276664067,
+     "dqsVol": 0.995886742727
+    },
+    {
+     "t": 0.625,
+     "lbsShrink": 0.118078735652,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.967117271563,
+     "dqsVol": 0.995148029032
+    },
+    {
+     "t": 0.6875,
+     "lbsShrink": 0.14227139,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.961109000767,
+     "dqsVol": 0.994353440651
+    },
+    {
+     "t": 0.75,
+     "lbsShrink": 0.168530387697,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.954799691213,
+     "dqsVol": 0.99350310096
+    },
+    {
+     "t": 0.8125,
+     "lbsShrink": 0.196792468519,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.948250105002,
+     "dqsVol": 0.992597137525
+    },
+    {
+     "t": 0.875,
+     "lbsShrink": 0.226989546637,
+     "dqsShrink": 4.4408920985e-16,
+     "lbsVol": 0.941523318229,
+     "dqsVol": 0.991635684927
+    },
+    {
+     "t": 0.9375,
+     "lbsShrink": 0.259048874645,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.934684113529,
+     "dqsVol": 0.990618888118
+    },
+    {
+     "t": 1,
+     "lbsShrink": 0.292893218813,
+     "dqsShrink": 4.4408920985e-16,
+     "lbsVol": 0.92779835618,
+     "dqsVol": 0.989546906393
+    }
+   ]
+  },
+  {
+   "id": "twist2-120",
+   "bones": 2,
+   "L": 1,
+   "radius": 0.35,
+   "perBone": 9,
+   "seg": 32,
+   "blend": 0.25,
+   "pureTwist": true,
+   "analyticMaxShrink": 0.5,
+   "keys": [
+    {
+     "t": 0,
+     "twist": [
+      0,
+      0
+     ],
+     "bend": [
+      0,
+      0
+     ]
+    },
+    {
+     "t": 1,
+     "twist": [
+      0,
+      120
+     ],
+     "bend": [
+      0,
+      0
+     ]
+    }
+   ],
+   "jointRings": [
+    {
+     "ring": 8,
+     "child": 1
+    }
+   ],
+   "sweep": {
+    "lbsShrink": {
+     "lower": 0.5,
+     "upper": 0.500026587371,
+     "relWidth": 0.0000531747,
+     "evals": 44
+    },
+    "dqsShrink": {
+     "lower": 7.77156117238e-16,
+     "upper": 7.77196774819e-16,
+     "relWidth": 0.0000523158,
+     "evals": 123
+    },
+    "lbsVolume": {
+     "lower": 0.89299838943,
+     "upper": 0.89299838943,
+     "relWidth": 0,
+     "evals": 124
+    },
+    "dqsVolume": {
+     "lower": 0.982906319774,
+     "upper": 0.982906319774,
+     "relWidth": 0,
+     "evals": 94
+    }
+   },
+   "oracle": [
+    {
+     "t": 0.25,
+     "child": 1,
+     "thetaDeg": 30,
+     "measuredRatio": 0.965925826289,
+     "predictedLBSratio": 0.965925826289,
+     "measuredLBSangleDeg": 15,
+     "predictedLBSangleDeg": 15,
+     "measuredDQSRatio": 1,
+     "measuredDQSangleDeg": 15,
+     "predictedDQSangleDeg": 15,
+     "ratioAbsErr": 0,
+     "angleAbsErr": 0
+    },
+    {
+     "t": 0.5,
+     "child": 1,
+     "thetaDeg": 60,
+     "measuredRatio": 0.866025403784,
+     "predictedLBSratio": 0.866025403784,
+     "measuredLBSangleDeg": 30,
+     "predictedLBSangleDeg": 30,
+     "measuredDQSRatio": 1,
+     "measuredDQSangleDeg": 30,
+     "predictedDQSangleDeg": 30,
+     "ratioAbsErr": 0,
+     "angleAbsErr": 0
+    },
+    {
+     "t": 0.75,
+     "child": 1,
+     "thetaDeg": 90,
+     "measuredRatio": 0.707106781187,
+     "predictedLBSratio": 0.707106781187,
+     "measuredLBSangleDeg": 45,
+     "predictedLBSangleDeg": 45,
+     "measuredDQSRatio": 1,
+     "measuredDQSangleDeg": 45,
+     "predictedDQSangleDeg": 45,
+     "ratioAbsErr": 0,
+     "angleAbsErr": 0
+    },
+    {
+     "t": 1,
+     "child": 1,
+     "thetaDeg": 120,
+     "measuredRatio": 0.5,
+     "predictedLBSratio": 0.5,
+     "measuredLBSangleDeg": 60,
+     "predictedLBSangleDeg": 60,
+     "measuredDQSRatio": 1,
+     "measuredDQSangleDeg": 60,
+     "predictedDQSangleDeg": 60,
+     "ratioAbsErr": 0,
+     "angleAbsErr": 0
+    }
+   ],
+   "samples": [
+    {
+     "t": 0,
+     "lbsShrink": 0,
+     "dqsShrink": 0,
+     "lbsVol": 1,
+     "dqsVol": 1
+    },
+    {
+     "t": 0.0625,
+     "lbsShrink": 0.0021410767614,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.999132032006,
+     "dqsVol": 0.999680576691
+    },
+    {
+     "t": 0.125,
+     "lbsShrink": 0.00855513862619,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.997078633693,
+     "dqsVol": 0.999259752422
+    },
+    {
+     "t": 0.1875,
+     "lbsShrink": 0.0192147195968,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.993874939273,
+     "dqsVol": 0.998737894897
+    },
+    {
+     "t": 0.25,
+     "lbsShrink": 0.0340741737109,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.989575764846,
+     "dqsVol": 0.99811534777
+    },
+    {
+     "t": 0.3125,
+     "lbsShrink": 0.0530698705049,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.98425467048,
+     "dqsVol": 0.997392434063
+    },
+    {
+     "t": 0.375,
+     "lbsShrink": 0.0761204674887,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.978002701574,
+     "dqsVol": 0.996569460164
+    },
+    {
+     "t": 0.4375,
+     "lbsShrink": 0.103127258467,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.97092683105,
+     "dqsVol": 0.995646720645
+    },
+    {
+     "t": 0.5,
+     "lbsShrink": 0.133974596216,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.963148129013,
+     "dqsVol": 0.994624504188
+    },
+    {
+     "t": 0.5625,
+     "lbsShrink": 0.168530387697,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.954799691213,
+     "dqsVol": 0.99350310096
+    },
+    {
+     "t": 0.625,
+     "lbsShrink": 0.206646659709,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.946024361735,
+     "dqsVol": 0.992282811879
+    },
+    {
+     "t": 0.6875,
+     "lbsShrink": 0.248160192521,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.936972288898,
+     "dqsVol": 0.990963960254
+    },
+    {
+     "t": 0.75,
+     "lbsShrink": 0.292893218813,
+     "dqsShrink": 4.4408920985e-16,
+     "lbsVol": 0.92779835618,
+     "dqsVol": 0.989546906393
+    },
+    {
+     "t": 0.8125,
+     "lbsShrink": 0.3406541849,
+     "dqsShrink": 4.4408920985e-16,
+     "lbsVol": 0.918659532112,
+     "dqsVol": 0.988032065825
+    },
+    {
+     "t": 0.875,
+     "lbsShrink": 0.391238570991,
+     "dqsShrink": 4.4408920985e-16,
+     "lbsVol": 0.909712184508,
+     "dqsVol": 0.986419931909
+    },
+    {
+     "t": 0.9375,
+     "lbsShrink": 0.44442976698,
+     "dqsShrink": 6.66133814775e-16,
+     "lbsVol": 0.901109404967,
+     "dqsVol": 0.984711103668
+    },
+    {
+     "t": 1,
+     "lbsShrink": 0.5,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.89299838943,
+     "dqsVol": 0.982906319774
+    }
+   ]
+  },
+  {
+   "id": "twist3-90",
+   "bones": 3,
+   "L": 1,
+   "radius": 0.35,
+   "perBone": 9,
+   "seg": 32,
+   "blend": 0.25,
+   "pureTwist": true,
+   "analyticMaxShrink": 0.292893218813,
+   "keys": [
+    {
+     "t": 0,
+     "twist": [
+      0,
+      0,
+      0
+     ],
+     "bend": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "t": 1,
+     "twist": [
+      0,
+      90,
+      90
+     ],
+     "bend": [
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "jointRings": [
+    {
+     "ring": 8,
+     "child": 1
+    },
+    {
+     "ring": 16,
+     "child": 2
+    }
+   ],
+   "sweep": {
+    "lbsShrink": {
+     "lower": 0.292893218813,
+     "upper": 0.292909456369,
+     "relWidth": 0.0000554385,
+     "evals": 44
+    },
+    "dqsShrink": {
+     "lower": 1.11022302463e-15,
+     "upper": 1.11033144484e-15,
+     "relWidth": 0.0000976563,
+     "evals": 73
+    },
+    "lbsVolume": {
+     "lower": 0.903731141573,
+     "upper": 0.903731141573,
+     "relWidth": 0,
+     "evals": 110
+    },
+    "dqsVolume": {
+     "lower": 0.986062541857,
+     "upper": 0.986062541857,
+     "relWidth": 0,
+     "evals": 89
+    }
+   },
+   "oracle": [
+    {
+     "t": 0.25,
+     "child": 2,
+     "thetaDeg": 22.5,
+     "measuredRatio": 0.980785280403,
+     "predictedLBSratio": 0.980785280403,
+     "measuredLBSangleDeg": 33.75,
+     "predictedLBSangleDeg": 11.25,
+     "measuredDQSRatio": 1,
+     "measuredDQSangleDeg": 33.75,
+     "predictedDQSangleDeg": 11.25,
+     "ratioAbsErr": 0,
+     "angleAbsErr": 22.5
+    },
+    {
+     "t": 0.5,
+     "child": 2,
+     "thetaDeg": 45,
+     "measuredRatio": 0.923879532511,
+     "predictedLBSratio": 0.923879532511,
+     "measuredLBSangleDeg": 67.5,
+     "predictedLBSangleDeg": 22.5,
+     "measuredDQSRatio": 1,
+     "measuredDQSangleDeg": 67.5,
+     "predictedDQSangleDeg": 22.5,
+     "ratioAbsErr": 0,
+     "angleAbsErr": 45
+    },
+    {
+     "t": 0.75,
+     "child": 2,
+     "thetaDeg": 67.5,
+     "measuredRatio": 0.831469612303,
+     "predictedLBSratio": 0.831469612303,
+     "measuredLBSangleDeg": 101.25,
+     "predictedLBSangleDeg": 33.75,
+     "measuredDQSRatio": 1,
+     "measuredDQSangleDeg": 101.25,
+     "predictedDQSangleDeg": 33.75,
+     "ratioAbsErr": 0,
+     "angleAbsErr": 67.5
+    },
+    {
+     "t": 1,
+     "child": 2,
+     "thetaDeg": 90,
+     "measuredRatio": 0.707106781187,
+     "predictedLBSratio": 0.707106781187,
+     "measuredLBSangleDeg": 135,
+     "predictedLBSangleDeg": 45,
+     "measuredDQSRatio": 1,
+     "measuredDQSangleDeg": 135,
+     "predictedDQSangleDeg": 45,
+     "ratioAbsErr": 0,
+     "angleAbsErr": 90
+    }
+   ],
+   "samples": [
+    {
+     "t": 0,
+     "lbsShrink": 0,
+     "dqsShrink": 0,
+     "lbsVol": 1,
+     "dqsVol": 1
+    },
+    {
+     "t": 0.0625,
+     "lbsShrink": 0.00120454379483,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.999281450726,
+     "dqsVol": 0.999693271726
+    },
+    {
+     "t": 0.125,
+     "lbsShrink": 0.0048152733278,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.997669047688,
+     "dqsVol": 0.999310421459
+    },
+    {
+     "t": 0.1875,
+     "lbsShrink": 0.0108234900352,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.995178319208,
+     "dqsVol": 0.998851661464
+    },
+    {
+     "t": 0.25,
+     "lbsShrink": 0.0192147195968,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.991833252363,
+     "dqsVol": 0.998317193196
+    },
+    {
+     "t": 0.3125,
+     "lbsShrink": 0.0299687468055,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.987666061976,
+     "dqsVol": 0.997707208293
+    },
+    {
+     "t": 0.375,
+     "lbsShrink": 0.0430596642678,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.982716880368,
+     "dqsVol": 0.99702188967
+    },
+    {
+     "t": 0.4375,
+     "lbsShrink": 0.058455934817,
+     "dqsShrink": 4.4408920985e-16,
+     "lbsVol": 0.977033370864,
+     "dqsVol": 0.996261412752
+    },
+    {
+     "t": 0.5,
+     "lbsShrink": 0.0761204674887,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.970670268766,
+     "dqsVol": 0.995425946885
+    },
+    {
+     "t": 0.5625,
+     "lbsShrink": 0.0960107068766,
+     "dqsShrink": 4.4408920985e-16,
+     "lbsVol": 0.963688854227,
+     "dqsVol": 0.99451565697
+    },
+    {
+     "t": 0.625,
+     "lbsShrink": 0.118078735652,
+     "dqsShrink": 6.66133814775e-16,
+     "lbsVol": 0.956156362084,
+     "dqsVol": 0.993530705376
+    },
+    {
+     "t": 0.6875,
+     "lbsShrink": 0.14227139,
+     "dqsShrink": 9.99200722163e-16,
+     "lbsVol": 0.948145334356,
+     "dqsVol": 0.992471254201
+    },
+    {
+     "t": 0.75,
+     "lbsShrink": 0.168530387697,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.939732921617,
+     "dqsVol": 0.991337467947
+    },
+    {
+     "t": 0.8125,
+     "lbsShrink": 0.196792468519,
+     "dqsShrink": 6.66133814775e-16,
+     "lbsVol": 0.931000140003,
+     "dqsVol": 0.990129516701
+    },
+    {
+     "t": 0.875,
+     "lbsShrink": 0.226989546637,
+     "dqsShrink": 6.66133814775e-16,
+     "lbsVol": 0.922031090972,
+     "dqsVol": 0.988847579902
+    },
+    {
+     "t": 0.9375,
+     "lbsShrink": 0.259048874645,
+     "dqsShrink": 7.77156117238e-16,
+     "lbsVol": 0.912912151372,
+     "dqsVol": 0.987491850824
+    },
+    {
+     "t": 1,
+     "lbsShrink": 0.292893218813,
+     "dqsShrink": 4.4408920985e-16,
+     "lbsVol": 0.903731141573,
+     "dqsVol": 0.986062541857
+    }
+   ]
+  },
+  {
+   "id": "twist-bend3",
+   "bones": 3,
+   "L": 1,
+   "radius": 0.35,
+   "perBone": 9,
+   "seg": 32,
+   "blend": 0.25,
+   "pureTwist": false,
+   "analyticMaxShrink": null,
+   "keys": [
+    {
+     "t": 0,
+     "twist": [
+      0,
+      0,
+      0
+     ],
+     "bend": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "t": 0.5,
+     "twist": [
+      0,
+      70,
+      40
+     ],
+     "bend": [
+      0,
+      25,
+      -15
+     ]
+    },
+    {
+     "t": 1,
+     "twist": [
+      0,
+      95,
+      60
+     ],
+     "bend": [
+      0,
+      10,
+      20
+     ]
+    }
+   ],
+   "jointRings": [
+    {
+     "ring": 8,
+     "child": 1
+    },
+    {
+     "ring": 16,
+     "child": 2
+    }
+   ],
+   "sweep": {
+    "lbsShrink": {
+     "lower": 0.326969879914,
+     "upper": 0.326997107766,
+     "relWidth": 0.0000832733,
+     "evals": 60
+    },
+    "dqsShrink": {
+     "lower": 2.33146835171e-15,
+     "upper": 2.33165808709e-15,
+     "relWidth": 0.0000813802,
+     "evals": 133
+    },
+    "lbsVolume": {
+     "lower": 0.922299821204,
+     "upper": 0.922299821204,
+     "relWidth": 0,
+     "evals": 171
+    },
+    "dqsVolume": {
+     "lower": 0.988369509369,
+     "upper": 0.988369509369,
+     "relWidth": 0,
+     "evals": 120
+    }
+   },
+   "oracle": [],
+   "samples": [
+    {
+     "t": 0,
+     "lbsShrink": 0,
+     "dqsShrink": 0,
+     "lbsVol": 1,
+     "dqsVol": 1
+    },
+    {
+     "t": 0.0625,
+     "lbsShrink": 0.00328243817856,
+     "dqsShrink": 4.4408920985e-16,
+     "lbsVol": 0.99889576751,
+     "dqsVol": 0.99959860051
+    },
+    {
+     "t": 0.125,
+     "lbsShrink": 0.0131053391877,
+     "dqsShrink": 4.4408920985e-16,
+     "lbsVol": 0.996263732827,
+     "dqsVol": 0.999051651642
+    },
+    {
+     "t": 0.1875,
+     "lbsShrink": 0.0293767232558,
+     "dqsShrink": 6.66133814775e-16,
+     "lbsVol": 0.992168549076,
+     "dqsVol": 0.998360263994
+    },
+    {
+     "t": 0.25,
+     "lbsShrink": 0.0519041400804,
+     "dqsShrink": 4.4408920985e-16,
+     "lbsVol": 0.986711052029,
+     "dqsVol": 0.997525659768
+    },
+    {
+     "t": 0.3125,
+     "lbsShrink": 0.0806133846935,
+     "dqsShrink": 7.77156117238e-16,
+     "lbsVol": 0.980025027294,
+     "dqsVol": 0.996549180601
+    },
+    {
+     "t": 0.375,
+     "lbsShrink": 0.115042357312,
+     "dqsShrink": 7.77156117238e-16,
+     "lbsVol": 0.972272934859,
+     "dqsVol": 0.995432296772
+    },
+    {
+     "t": 0.4375,
+     "lbsShrink": 0.155048420683,
+     "dqsShrink": 1.44328993201e-15,
+     "lbsVol": 0.963640747497,
+     "dqsVol": 0.994176618213
+    },
+    {
+     "t": 0.5,
+     "lbsShrink": 0.200251191966,
+     "dqsShrink": 9.99200722163e-16,
+     "lbsVol": 0.954332091353,
+     "dqsVol": 0.992783907806
+    },
+    {
+     "t": 0.5625,
+     "lbsShrink": 0.213030786621,
+     "dqsShrink": 7.77156117238e-16,
+     "lbsVol": 0.951122695386,
+     "dqsVol": 0.992435067932
+    },
+    {
+     "t": 0.625,
+     "lbsShrink": 0.226693752551,
+     "dqsShrink": 1.22124532709e-15,
+     "lbsVol": 0.947634699901,
+     "dqsVol": 0.992027228988
+    },
+    {
+     "t": 0.6875,
+     "lbsShrink": 0.24127458987,
+     "dqsShrink": 1.7763568394e-15,
+     "lbsVol": 0.943891086692,
+     "dqsVol": 0.991560863104
+    },
+    {
+     "t": 0.75,
+     "lbsShrink": 0.25684386854,
+     "dqsShrink": 1.44328993201e-15,
+     "lbsVol": 0.939917298187,
+     "dqsVol": 0.991036466771
+    },
+    {
+     "t": 0.8125,
+     "lbsShrink": 0.273208815503,
+     "dqsShrink": 1.11022302463e-15,
+     "lbsVol": 0.935740972923,
+     "dqsVol": 0.990454563252
+    },
+    {
+     "t": 0.875,
+     "lbsShrink": 0.290360392481,
+     "dqsShrink": 1.22124532709e-15,
+     "lbsVol": 0.931391653981,
+     "dqsVol": 0.989815705516
+    },
+    {
+     "t": 0.9375,
+     "lbsShrink": 0.308286116992,
+     "dqsShrink": 1.11022302463e-15,
+     "lbsVol": 0.926900474065,
+     "dqsVol": 0.98912047973
+    },
+    {
+     "t": 1,
+     "lbsShrink": 0.326969879914,
+     "dqsShrink": 1.22124532709e-15,
+     "lbsVol": 0.922299821204,
+     "dqsVol": 0.988369509369
+    }
+   ]
+  },
+  {
+   "id": "twist-scrub2",
+   "bones": 2,
+   "L": 1,
+   "radius": 0.35,
+   "perBone": 9,
+   "seg": 32,
+   "blend": 0.25,
+   "pureTwist": true,
+   "analyticMaxShrink": 0.357212390313,
+   "keys": [
+    {
+     "t": 0,
+     "twist": [
+      0,
+      10
+     ],
+     "bend": [
+      0,
+      0
+     ]
+    },
+    {
+     "t": 0.25,
+     "twist": [
+      0,
+      100
+     ],
+     "bend": [
+      0,
+      0
+     ]
+    },
+    {
+     "t": 0.6,
+     "twist": [
+      0,
+      20
+     ],
+     "bend": [
+      0,
+      0
+     ]
+    },
+    {
+     "t": 1,
+     "twist": [
+      0,
+      88
+     ],
+     "bend": [
+      0,
+      0
+     ]
+    }
+   ],
+   "jointRings": [
+    {
+     "ring": 8,
+     "child": 1
+    }
+   ],
+   "sweep": {
+    "lbsShrink": {
+     "lower": 0.357212390313,
+     "upper": 0.357245764414,
+     "relWidth": 0.0000934293,
+     "evals": 67
+    },
+    "dqsShrink": {
+     "lower": 6.66133814775e-16,
+     "upper": 6.66174472357e-16,
+     "relWidth": 0.0000610352,
+     "evals": 113
+    },
+    "lbsVolume": {
+     "lower": 0.915648154774,
+     "upper": 0.915648154774,
+     "relWidth": 0,
+     "evals": 224
+    },
+    "dqsVolume": {
+     "lower": 0.987505471116,
+     "upper": 0.987505471116,
+     "relWidth": 0,
+     "evals": 170
+    }
+   },
+   "oracle": [
+    {
+     "t": 0.25,
+     "child": 1,
+     "thetaDeg": 100,
+     "measuredRatio": 0.642787609687,
+     "predictedLBSratio": 0.642787609687,
+     "measuredLBSangleDeg": 50,
+     "predictedLBSangleDeg": 50,
+     "measuredDQSRatio": 1,
+     "measuredDQSangleDeg": 50,
+     "predictedDQSangleDeg": 50,
+     "ratioAbsErr": 0,
+     "angleAbsErr": 0
+    },
+    {
+     "t": 0.5,
+     "child": 1,
+     "thetaDeg": 42.8571,
+     "measuredRatio": 0.930873748644,
+     "predictedLBSratio": 0.930873748644,
+     "measuredLBSangleDeg": 21.4285714,
+     "predictedLBSangleDeg": 21.4285714,
+     "measuredDQSRatio": 1,
+     "measuredDQSangleDeg": 21.4285714,
+     "predictedDQSangleDeg": 21.4285714,
+     "ratioAbsErr": 0,
+     "angleAbsErr": 0
+    },
+    {
+     "t": 0.75,
+     "child": 1,
+     "thetaDeg": 45.5,
+     "measuredRatio": 0.92220097167,
+     "predictedLBSratio": 0.92220097167,
+     "measuredLBSangleDeg": 22.75,
+     "predictedLBSangleDeg": 22.75,
+     "measuredDQSRatio": 1,
+     "measuredDQSangleDeg": 22.75,
+     "predictedDQSangleDeg": 22.75,
+     "ratioAbsErr": 0,
+     "angleAbsErr": 0
+    },
+    {
+     "t": 1,
+     "child": 1,
+     "thetaDeg": 88,
+     "measuredRatio": 0.719339800339,
+     "predictedLBSratio": 0.719339800339,
+     "measuredLBSangleDeg": 44,
+     "predictedLBSangleDeg": 44,
+     "measuredDQSRatio": 1,
+     "measuredDQSangleDeg": 44,
+     "predictedDQSangleDeg": 44,
+     "ratioAbsErr": 0,
+     "angleAbsErr": 0
+    }
+   ],
+   "samples": [
+    {
+     "t": 0,
+     "lbsShrink": 0.00380530190825,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.998577958399,
+     "dqsVol": 0.999551550021
+    },
+    {
+     "t": 0.0625,
+     "lbsShrink": 0.0399501456141,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.987911463365,
+     "dqsVol": 0.997885512947
+    },
+    {
+     "t": 0.125,
+     "lbsShrink": 0.112989166822,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.968405676508,
+     "dqsVol": 0.995317020601
+    },
+    {
+     "t": 0.1875,
+     "lbsShrink": 0.220115516907,
+     "dqsShrink": 4.4408920985e-16,
+     "lbsVol": 0.943030177057,
+     "dqsVol": 0.991854129191
+    },
+    {
+     "t": 0.25,
+     "lbsShrink": 0.357212390313,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.915648154774,
+     "dqsVol": 0.987505471116
+    },
+    {
+     "t": 0.3125,
+     "lbsShrink": 0.26694812817,
+     "dqsShrink": 4.4408920985e-16,
+     "lbsVol": 0.933046390325,
+     "dqsVol": 0.990368653485
+    },
+    {
+     "t": 0.375,
+     "lbsShrink": 0.188061994284,
+     "dqsShrink": 4.4408920985e-16,
+     "lbsVol": 0.950246959855,
+     "dqsVol": 0.992876214819
+    },
+    {
+     "t": 0.4375,
+     "lbsShrink": 0.12177842663,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.966186086788,
+     "dqsVol": 0.995025631353
+    },
+    {
+     "t": 0.5,
+     "lbsShrink": 0.0691262513558,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.979878009004,
+     "dqsVol": 0.996814788445
+    },
+    {
+     "t": 0.5625,
+     "lbsShrink": 0.0309227137709,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.99047594372,
+     "dqsVol": 0.998241675815
+    },
+    {
+     "t": 0.625,
+     "lbsShrink": 0.022308319669,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.992967374582,
+     "dqsVol": 0.99860162784
+    },
+    {
+     "t": 0.6875,
+     "lbsShrink": 0.0459555975937,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.986227953896,
+     "dqsVol": 0.997656851089
+    },
+    {
+     "t": 0.75,
+     "lbsShrink": 0.0777990283295,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.97755534116,
+     "dqsVol": 0.996511044805
+    },
+    {
+     "t": 0.8125,
+     "lbsShrink": 0.117565046387,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.967246920411,
+     "dqsVol": 0.995165052377
+    },
+    {
+     "t": 0.875,
+     "lbsShrink": 0.164912023681,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.955656167567,
+     "dqsVol": 0.993619696245
+    },
+    {
+     "t": 0.9375,
+     "lbsShrink": 0.219433204448,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.943180529737,
+     "dqsVol": 0.991875823233
+    },
+    {
+     "t": 1,
+     "lbsShrink": 0.280660199661,
+     "dqsShrink": 3.33066907388e-16,
+     "lbsVol": 0.93024779675,
+     "dqsVol": 0.989934367136
+    }
+   ]
+  }
+ ],
+ "scaleInvariance": [
+  {
+   "id": "twist2-60",
+   "values": [
+    {
+     "scale": 0.000001,
+     "lbsShrink": 0.133974596216,
+     "lbsVol": 0.963148129013,
+     "dqsShrink": 4.4408920985e-16,
+     "dqsVol": 0.994624504188
+    },
+    {
+     "scale": 0.001,
+     "lbsShrink": 0.133974596216,
+     "lbsVol": 0.963148129013,
+     "dqsShrink": 3.33066907388e-16,
+     "dqsVol": 0.994624504188
+    },
+    {
+     "scale": 1,
+     "lbsShrink": 0.133974596216,
+     "lbsVol": 0.963148129013,
+     "dqsShrink": 3.33066907388e-16,
+     "dqsVol": 0.994624504188
+    },
+    {
+     "scale": 1000,
+     "lbsShrink": 0.133974596216,
+     "lbsVol": 0.963148129013,
+     "dqsShrink": 3.33066907388e-16,
+     "dqsVol": 0.994624504188
+    },
+    {
+     "scale": 1000000,
+     "lbsShrink": 0.133974596216,
+     "lbsVol": 0.963148129013,
+     "dqsShrink": 3.33066907388e-16,
+     "dqsVol": 0.994624504188
+    }
+   ]
+  },
+  {
+   "id": "twist2-90",
+   "values": [
+    {
+     "scale": 0.000001,
+     "lbsShrink": 0.292893218813,
+     "lbsVol": 0.92779835618,
+     "dqsShrink": 3.33066907388e-16,
+     "dqsVol": 0.989546906393
+    },
+    {
+     "scale": 0.001,
+     "lbsShrink": 0.292893218813,
+     "lbsVol": 0.92779835618,
+     "dqsShrink": 3.33066907388e-16,
+     "dqsVol": 0.989546906393
+    },
+    {
+     "scale": 1,
+     "lbsShrink": 0.292893218813,
+     "lbsVol": 0.92779835618,
+     "dqsShrink": 4.4408920985e-16,
+     "dqsVol": 0.989546906393
+    },
+    {
+     "scale": 1000,
+     "lbsShrink": 0.292893218813,
+     "lbsVol": 0.92779835618,
+     "dqsShrink": 3.33066907388e-16,
+     "dqsVol": 0.989546906393
+    },
+    {
+     "scale": 1000000,
+     "lbsShrink": 0.292893218813,
+     "lbsVol": 0.92779835618,
+     "dqsShrink": 3.33066907388e-16,
+     "dqsVol": 0.989546906393
+    }
+   ]
+  },
+  {
+   "id": "twist2-120",
+   "values": [
+    {
+     "scale": 0.000001,
+     "lbsShrink": 0.5,
+     "lbsVol": 0.89299838943,
+     "dqsShrink": 4.4408920985e-16,
+     "dqsVol": 0.982906319774
+    },
+    {
+     "scale": 0.001,
+     "lbsShrink": 0.5,
+     "lbsVol": 0.89299838943,
+     "dqsShrink": 4.4408920985e-16,
+     "dqsVol": 0.982906319774
+    },
+    {
+     "scale": 1,
+     "lbsShrink": 0.5,
+     "lbsVol": 0.89299838943,
+     "dqsShrink": 3.33066907388e-16,
+     "dqsVol": 0.982906319774
+    },
+    {
+     "scale": 1000,
+     "lbsShrink": 0.5,
+     "lbsVol": 0.89299838943,
+     "dqsShrink": 4.4408920985e-16,
+     "dqsVol": 0.982906319774
+    },
+    {
+     "scale": 1000000,
+     "lbsShrink": 0.5,
+     "lbsVol": 0.89299838943,
+     "dqsShrink": 3.33066907388e-16,
+     "dqsVol": 0.982906319774
+    }
+   ]
+  },
+  {
+   "id": "twist3-90",
+   "values": [
+    {
+     "scale": 0.000001,
+     "lbsShrink": 0.292893218813,
+     "lbsVol": 0.903731141573,
+     "dqsShrink": 3.33066907388e-16,
+     "dqsVol": 0.986062541857
+    },
+    {
+     "scale": 0.001,
+     "lbsShrink": 0.292893218813,
+     "lbsVol": 0.903731141573,
+     "dqsShrink": 3.33066907388e-16,
+     "dqsVol": 0.986062541857
+    },
+    {
+     "scale": 1,
+     "lbsShrink": 0.292893218813,
+     "lbsVol": 0.903731141573,
+     "dqsShrink": 4.4408920985e-16,
+     "dqsVol": 0.986062541857
+    },
+    {
+     "scale": 1000,
+     "lbsShrink": 0.292893218813,
+     "lbsVol": 0.903731141573,
+     "dqsShrink": 3.33066907388e-16,
+     "dqsVol": 0.986062541857
+    },
+    {
+     "scale": 1000000,
+     "lbsShrink": 0.292893218813,
+     "lbsVol": 0.903731141573,
+     "dqsShrink": 3.33066907388e-16,
+     "dqsVol": 0.986062541857
+    }
+   ]
+  },
+  {
+   "id": "twist-bend3",
+   "values": [
+    {
+     "scale": 0.000001,
+     "lbsShrink": 0.326969879914,
+     "lbsVol": 0.922299821204,
+     "dqsShrink": 1.22124532709e-15,
+     "dqsVol": 0.988369509369
+    },
+    {
+     "scale": 0.001,
+     "lbsShrink": 0.326969879914,
+     "lbsVol": 0.922299821204,
+     "dqsShrink": 1.55431223448e-15,
+     "dqsVol": 0.988369509369
+    },
+    {
+     "scale": 1,
+     "lbsShrink": 0.326969879914,
+     "lbsVol": 0.922299821204,
+     "dqsShrink": 1.22124532709e-15,
+     "dqsVol": 0.988369509369
+    },
+    {
+     "scale": 1000,
+     "lbsShrink": 0.326969879914,
+     "lbsVol": 0.922299821204,
+     "dqsShrink": 1.7763568394e-15,
+     "dqsVol": 0.988369509369
+    },
+    {
+     "scale": 1000000,
+     "lbsShrink": 0.326969879914,
+     "lbsVol": 0.922299821204,
+     "dqsShrink": 1.66533453694e-15,
+     "dqsVol": 0.98836950937
+    }
+   ]
+  },
+  {
+   "id": "twist-scrub2",
+   "values": [
+    {
+     "scale": 0.000001,
+     "lbsShrink": 0.280660199661,
+     "lbsVol": 0.93024779675,
+     "dqsShrink": 4.4408920985e-16,
+     "dqsVol": 0.989934367136
+    },
+    {
+     "scale": 0.001,
+     "lbsShrink": 0.280660199661,
+     "lbsVol": 0.93024779675,
+     "dqsShrink": 3.33066907388e-16,
+     "dqsVol": 0.989934367136
+    },
+    {
+     "scale": 1,
+     "lbsShrink": 0.280660199661,
+     "lbsVol": 0.93024779675,
+     "dqsShrink": 3.33066907388e-16,
+     "dqsVol": 0.989934367136
+    },
+    {
+     "scale": 1000,
+     "lbsShrink": 0.280660199661,
+     "lbsVol": 0.93024779675,
+     "dqsShrink": 4.4408920985e-16,
+     "dqsVol": 0.989934367136
+    },
+    {
+     "scale": 1000000,
+     "lbsShrink": 0.280660199661,
+     "lbsVol": 0.93024779675,
+     "dqsShrink": 3.33066907388e-16,
+     "dqsVol": 0.989934367136
+    }
+   ]
+  }
+ ]
+}

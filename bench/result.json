@@ -1,0 +1,255 @@
+{
+ "generatedBy": "bench/bench.mjs",
+ "runtime": {
+  "node": "v24.19.0",
+  "platform": "linux",
+  "cores": 4
+ },
+ "timeUnitMs": "milliseconds",
+ "coldStartMs": 27.2846,
+ "perMetricEvalMs": 0.16017,
+ "repeats": 9,
+ "adaptiveSweep6ScenariosMs": {
+  "n": 9,
+  "min": 33.0967,
+  "median": 34.1763,
+  "p95": 39.7783,
+  "max": 39.7783,
+  "mean": 35.2253,
+  "stddev": 2.14,
+  "relStddev": 0.0608
+ },
+ "adaptiveSingleScenarioMs": {
+  "n": 9,
+  "min": 3.898,
+  "median": 4.0842,
+  "p95": 5.3,
+  "max": 5.3,
+  "mean": 4.19,
+  "stddev": 0.4072,
+  "relStddev": 0.0972
+ },
+ "uniform4096SingleScenarioMs": {
+  "n": 5,
+  "min": 332.2863,
+  "median": 335.9351,
+  "p95": 378.148,
+  "max": 378.148,
+  "mean": 344.7352,
+  "stddev": 17.1662,
+  "relStddev": 0.0498
+ },
+ "volumeSweep12MinSweepsMs": {
+  "n": 5,
+  "min": 326.8361,
+  "median": 332.5722,
+  "p95": 378.2506,
+  "max": 378.2506,
+  "mean": 342.057,
+  "stddev": 18.6036,
+  "relStddev": 0.0544
+ },
+ "lipschitzEstimated": 1.0974,
+ "evalBudget": {
+  "scenario": "twist2-90",
+  "adaptiveEvals": 44,
+  "adaptiveRelWidth": 0.00005544,
+  "uniform4096RelWidth": 0.0004574,
+  "uniformEvalsToReachSameWidth": 32769,
+  "uniformRelWidthAtThatN": 0.00005717,
+  "evalCountRatio": 744.8
+ },
+ "headline": [
+  {
+   "id": "twist2-60",
+   "bones": 2,
+   "pureTwist": true,
+   "analyticMaxShrink": 0.133974596216,
+   "lbsShrink": {
+    "lower": 0.133974596216,
+    "upper": 0.133982236814,
+    "relWidth": 0.00005703,
+    "evals": 44
+   },
+   "dqsShrink": {
+    "lower": 6.66133814775e-16,
+    "upper": 6.66174472357e-16,
+    "relWidth": 0.00006104,
+    "evals": 284
+   },
+   "lbsVolumeRatio": {
+    "lower": 0.963148129013,
+    "upper": 0.963148129013,
+    "evals": 90
+   },
+   "dqsVolumeRatio": {
+    "lower": 0.994624504188,
+    "upper": 0.994624504188,
+    "evals": 90
+   },
+   "restVolume": 0.764754062303,
+   "verts": 546,
+   "tris": 1088
+  },
+  {
+   "id": "twist2-90",
+   "bones": 2,
+   "pureTwist": true,
+   "analyticMaxShrink": 0.292893218813,
+   "lbsShrink": {
+    "lower": 0.292893218813,
+    "upper": 0.292909456369,
+    "relWidth": 0.00005544,
+    "evals": 44
+   },
+   "dqsShrink": {
+    "lower": 6.66133814775e-16,
+    "upper": 6.66174472357e-16,
+    "relWidth": 0.00006104,
+    "evals": 93
+   },
+   "lbsVolumeRatio": {
+    "lower": 0.92779835618,
+    "upper": 0.92779835618,
+    "evals": 119
+   },
+   "dqsVolumeRatio": {
+    "lower": 0.989546906393,
+    "upper": 0.989546906393,
+    "evals": 87
+   },
+   "restVolume": 0.764754062303,
+   "verts": 546,
+   "tris": 1088
+  },
+  {
+   "id": "twist2-120",
+   "bones": 2,
+   "pureTwist": true,
+   "analyticMaxShrink": 0.5,
+   "lbsShrink": {
+    "lower": 0.5,
+    "upper": 0.500026587371,
+    "relWidth": 0.00005317,
+    "evals": 44
+   },
+   "dqsShrink": {
+    "lower": 7.77156117238e-16,
+    "upper": 7.77196774819e-16,
+    "relWidth": 0.00005232,
+    "evals": 123
+   },
+   "lbsVolumeRatio": {
+    "lower": 0.89299838943,
+    "upper": 0.89299838943,
+    "evals": 124
+   },
+   "dqsVolumeRatio": {
+    "lower": 0.982906319774,
+    "upper": 0.982906319774,
+    "evals": 94
+   },
+   "restVolume": 0.764754062303,
+   "verts": 546,
+   "tris": 1088
+  },
+  {
+   "id": "twist3-90",
+   "bones": 3,
+   "pureTwist": true,
+   "analyticMaxShrink": 0.292893218813,
+   "lbsShrink": {
+    "lower": 0.292893218813,
+    "upper": 0.292909456369,
+    "relWidth": 0.00005544,
+    "evals": 44
+   },
+   "dqsShrink": {
+    "lower": 1.11022302463e-15,
+    "upper": 1.11033144484e-15,
+    "relWidth": 0.00009766,
+    "evals": 73
+   },
+   "lbsVolumeRatio": {
+    "lower": 0.903731141573,
+    "upper": 0.903731141573,
+    "evals": 110
+   },
+   "dqsVolumeRatio": {
+    "lower": 0.986062541857,
+    "upper": 0.986062541857,
+    "evals": 89
+   },
+   "restVolume": 1.14713109345,
+   "verts": 802,
+   "tris": 1600
+  },
+  {
+   "id": "twist-bend3",
+   "bones": 3,
+   "pureTwist": false,
+   "analyticMaxShrink": null,
+   "lbsShrink": {
+    "lower": 0.326969879914,
+    "upper": 0.326997107766,
+    "relWidth": 0.00008327,
+    "evals": 60
+   },
+   "dqsShrink": {
+    "lower": 2.33146835171e-15,
+    "upper": 2.33165808709e-15,
+    "relWidth": 0.00008138,
+    "evals": 133
+   },
+   "lbsVolumeRatio": {
+    "lower": 0.922299821204,
+    "upper": 0.922299821204,
+    "evals": 171
+   },
+   "dqsVolumeRatio": {
+    "lower": 0.988369509369,
+    "upper": 0.988369509369,
+    "evals": 120
+   },
+   "restVolume": 1.14713109345,
+   "verts": 802,
+   "tris": 1600
+  },
+  {
+   "id": "twist-scrub2",
+   "bones": 2,
+   "pureTwist": true,
+   "analyticMaxShrink": 0.357212390313,
+   "lbsShrink": {
+    "lower": 0.357212390313,
+    "upper": 0.357245764414,
+    "relWidth": 0.00009343,
+    "evals": 67
+   },
+   "dqsShrink": {
+    "lower": 6.66133814775e-16,
+    "upper": 6.66174472357e-16,
+    "relWidth": 0.00006104,
+    "evals": 113
+   },
+   "lbsVolumeRatio": {
+    "lower": 0.915648154774,
+    "upper": 0.915648154774,
+    "evals": 224
+   },
+   "dqsVolumeRatio": {
+    "lower": 0.987505471116,
+    "upper": 0.987505471116,
+    "evals": 170
+   },
+   "restVolume": 0.764754062303,
+   "verts": 546,
+   "tris": 1088
+  }
+ ],
+ "notes": [
+  "adaptive = branch-and-bound enclosure of the sweep extremum, driven by a numerically estimated Lipschitz bound (x2 safety factor); NOT a formal proof.",
+  "uniform = the baseline sampling strategy in baseline/uniform-sweep.mjs; it yields a point estimate, and an enclosure only when handed the same Lipschitz bound.",
+  "perMetricEvalMs is one full LBS evaluation of the whole tube mesh (transform build + skin + ring statistics + volume)."
+ ]
+}
