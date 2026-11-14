@@ -31,7 +31,7 @@ function sweep(scn, ctx, mode, metric, tol = 1e-4) {
   const e = metric === "volume"
     ? encloseMin(f, { tol, probe: 33, safety: 2 })
     : encloseMax(f, { tol, probe: 33, safety: 2 });
-  return { lower: round(e.lower), upper: round(e.upper), relWidth: round(e.relWidth, 6), evals: e.evals };
+  return { lower: round(e.lower), upper: round(e.upper), relWidth: round(e.relWidth, 6), evals: e.evals, stop: e.stop };
 }
 
 /** index of the ring that sits exactly on an interior joint (50/50 weights) */

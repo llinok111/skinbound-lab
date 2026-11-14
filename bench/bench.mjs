@@ -15,7 +15,7 @@ import {
 import { buildScenarios } from "../src/scenarios.mjs";
 
 const here = dirname(fileURLToPath(import.meta.url));
-const N_REPEAT = 9;
+const N_REPEAT = 21;
 const UNIFORM_N = 4096;
 
 const scns = buildScenarios();
@@ -66,6 +66,32 @@ for (let r = 0; r < N_REPEAT; r++) {
   adaptiveRuns.push(performance.now() - a);
 }
 
+/* ---------- cross-invocation stability: 3 independent batches ---------- */
+const batchMedians = [];
+for (let b = 0; b < 3; b++) {
+  const runs = [];
+  for (let r = 0; r < 7; r++) {
+    const a = performance.now();
+    for (let i = 0; i < scns.length; i++) encloseMax(fns[i].shrink, { tol: 1e-4, probe: 33, safety: 2 });
+    runs.push(performance.now() - a);
+  }
+  batchMedians.push(Number(stats(runs).median.toFixed(4)));
+}
+
+/* ---------- is the estimated Lipschitz constant adequate? ---------- */
+const lipschitzAudit = scns.map((scn, i) => {
+  const probeSlope = estimateLipschitz(fns[i].shrink, 33, 0, 1, 1);
+  const N = 2000;
+  let fineSlope = 0, prev = fns[i].shrink(0);
+  for (let k = 1; k <= N; k++) {
+    const cur = fns[i].shrink(k / N);
+    fineSlope = Math.max(fineSlope, Math.abs(cur - prev) * N);
+    prev = cur;
+  }
+  return { id: scn.id, probeMaxSlope: Number(probeSlope.toPrecision(6)), fineMaxSlope: Number(fineSlope.toPrecision(6)), ratioFineOverProbe: Number((fineSlope / probeSlope).toPrecision(6)) };
+});
+const worstLipschitzRatio = Math.max(...lipschitzAudit.map((r) => r.ratioFineOverProbe));
+
 /* ---------- single scenario: adaptive vs uniform at equal width ---------- */
 const i1 = 1;
 const L1 = estimateLipschitz(fns[i1].shrink, 33, 0, 1, 2);
@@ -97,10 +123,10 @@ const headline = scns.map((s, i) => {
     bones: s.rig.bones,
     pureTwist: s.pureTwist,
     analyticMaxShrink: s.analyticMaxShrink === null ? null : Number(s.analyticMaxShrink.toPrecision(12)),
-    lbsShrink: { lower: Number(encL.lower.toPrecision(12)), upper: Number(encL.upper.toPrecision(12)), relWidth: Number(encL.relWidth.toPrecision(4)), evals: encL.evals },
+    lbsShrink: { lower: Number(encL.lower.toPrecision(12)), upper: Number(encL.upper.toPrecision(12)), relWidth: Number(encL.relWidth.toPrecision(4)), evals: encL.evals, stop: encL.stop },
     dqsShrink: { lower: Number(encD.lower.toPrecision(12)), upper: Number(encD.upper.toPrecision(12)), relWidth: Number(encD.relWidth.toPrecision(4)), evals: encD.evals },
-    lbsVolumeRatio: { lower: Number(volL.lower.toPrecision(12)), upper: Number(volL.upper.toPrecision(12)), evals: volL.evals },
-    dqsVolumeRatio: { lower: Number(volD.lower.toPrecision(12)), upper: Number(volD.upper.toPrecision(12)), evals: volD.evals },
+    lbsVolumeRatio: { lower: Number(volL.lower.toPrecision(12)), upper: Number(volL.upper.toPrecision(12)), evals: volL.evals, stop: volL.stop },
+    dqsVolumeRatio: { lower: Number(volD.lower.toPrecision(12)), upper: Number(volD.upper.toPrecision(12)), evals: volD.evals, stop: volD.stop },
     restVolume: Number(rest.toPrecision(12)),
     verts: s.mesh.verts.length,
     tris: s.mesh.tris.length,
@@ -117,6 +143,10 @@ const out = {
   runtime: { node: process.version, platform: process.platform, cores: (await import("node:os")).cpus().length },
   timeUnitMs: "milliseconds",
   coldStartMs,
+  adaptiveSweep6BatchMediansMs: batchMedians,
+  adaptiveSweep6BatchSpreadMs: Number((Math.max(...batchMedians) - Math.min(...batchMedians)).toFixed(4)),
+  lipschitzAudit,
+  worstFineOverProbeSlopeRatio: Number(worstLipschitzRatio.toPrecision(6)),
   perMetricEvalMs: perEval,
   repeats: N_REPEAT,
   adaptiveSweep6ScenariosMs: stats(adaptiveRuns),
@@ -138,11 +168,15 @@ const out = {
     "adaptive = branch-and-bound enclosure of the sweep extremum, driven by a numerically estimated Lipschitz bound (x2 safety factor); NOT a formal proof.",
     "uniform = the baseline sampling strategy in baseline/uniform-sweep.mjs; it yields a point estimate, and an enclosure only when handed the same Lipschitz bound.",
     "perMetricEvalMs is one full LBS evaluation of the whole tube mesh (transform build + skin + ring statistics + volume).",
+    "The uniform baseline is handed the SAME numerically estimated Lipschitz constant as the certificate; the eval-count ratio compares sampling strategies under one shared bound, it is not an independently derived baseline rate.",
+    "lipschitzAudit re-measures max |df/dt| on a 2000-point grid (60x denser than the 33-point probe the bound is built from). ratioFineOverProbe <= 1 means the probe grid did not miss a steeper region.",
   ],
 };
 writeFileSync(join(here, "result.json"), JSON.stringify(out, null, 1) + "\n");
 
 console.log(`cold start            : ${coldStartMs} ms`);
+console.log(`adaptive-6 batch medians: ${batchMedians.join(" / ")} ms (spread ${out.adaptiveSweep6BatchSpreadMs} ms across 3 independent batches)`);
+console.log(`Lipschitz adequacy    : worst fine/probe slope ratio = ${out.worstFineOverProbeSlopeRatio} (<=1 means the 33-point probe did not miss a steeper region)`);
 console.log(`per metric eval       : ${out.perMetricEvalMs} ms`);
 console.log(`adaptive 6 scenarios  : n=${out.adaptiveSweep6ScenariosMs.n} median=${out.adaptiveSweep6ScenariosMs.median} ms p95=${out.adaptiveSweep6ScenariosMs.p95} relStddev=${(out.adaptiveSweep6ScenariosMs.relStddev * 100).toFixed(1)}%`);
 console.log(`adaptive 1 scenario   : median=${out.adaptiveSingleScenarioMs.median} ms relStddev=${(out.adaptiveSingleScenarioMs.relStddev * 100).toFixed(1)}%`);

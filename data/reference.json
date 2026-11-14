@@ -53,26 +53,30 @@
     "lbsShrink": {
      "lower": 0.133974596216,
      "upper": 0.133982236814,
-     "relWidth": 0.0000570302,
-     "evals": 44
+     "relWidth": 0.000057027,
+     "evals": 44,
+     "stop": "converged"
     },
     "dqsShrink": {
-     "lower": 6.66133814775e-16,
-     "upper": 6.66174472357e-16,
-     "relWidth": 0.0000610352,
-     "evals": 284
+     "lower": 4.4408920985e-16,
+     "upper": 5.27355936697e-16,
+     "relWidth": 0.0000832667,
+     "evals": 78,
+     "stop": "converged"
     },
     "lbsVolume": {
-     "lower": 0.963148129013,
+     "lower": 0.963087400718,
      "upper": 0.963148129013,
-     "relWidth": 0,
-     "evals": 90
+     "relWidth": 0.0000630519,
+     "evals": 39,
+     "stop": "converged"
     },
     "dqsVolume": {
-     "lower": 0.994624504188,
+     "lower": 0.994560271876,
      "upper": 0.994624504188,
-     "relWidth": 0,
-     "evals": 90
+     "relWidth": 0.0000645795,
+     "evals": 36,
+     "stop": "converged"
     }
    },
    "oracle": [
@@ -299,26 +303,30 @@
     "lbsShrink": {
      "lower": 0.292893218813,
      "upper": 0.292909456369,
-     "relWidth": 0.0000554385,
-     "evals": 44
+     "relWidth": 0.0000554354,
+     "evals": 44,
+     "stop": "converged"
     },
     "dqsShrink": {
      "lower": 6.66133814775e-16,
-     "upper": 6.66174472357e-16,
-     "relWidth": 0.0000610352,
-     "evals": 93
+     "upper": 7.49400541622e-16,
+     "relWidth": 0.0000832667,
+     "evals": 46,
+     "stop": "converged"
     },
     "lbsVolume": {
-     "lower": 0.92779835618,
+     "lower": 0.927746165819,
      "upper": 0.92779835618,
-     "relWidth": 0,
-     "evals": 119
+     "relWidth": 0.0000562518,
+     "evals": 40,
+     "stop": "converged"
     },
     "dqsVolume": {
-     "lower": 0.989546906393,
+     "lower": 0.989481077674,
      "upper": 0.989546906393,
-     "relWidth": 0,
-     "evals": 87
+     "relWidth": 0.0000665241,
+     "evals": 37,
+     "stop": "converged"
     }
    },
    "oracle": [
@@ -545,26 +553,30 @@
     "lbsShrink": {
      "lower": 0.5,
      "upper": 0.500026587371,
-     "relWidth": 0.0000531747,
-     "evals": 44
+     "relWidth": 0.0000531719,
+     "evals": 44,
+     "stop": "converged"
     },
     "dqsShrink": {
-     "lower": 7.77156117238e-16,
-     "upper": 7.77196774819e-16,
-     "relWidth": 0.0000523158,
-     "evals": 123
+     "lower": 6.66133814775e-16,
+     "upper": 7.49400541622e-16,
+     "relWidth": 0.0000832667,
+     "evals": 52,
+     "stop": "converged"
     },
     "lbsVolume": {
-     "lower": 0.89299838943,
+     "lower": 0.892916750604,
      "upper": 0.89299838943,
-     "relWidth": 0,
-     "evals": 124
+     "relWidth": 0.000091421,
+     "evals": 43,
+     "stop": "converged"
     },
     "dqsVolume": {
-     "lower": 0.982906319774,
+     "lower": 0.982850883714,
      "upper": 0.982906319774,
-     "relWidth": 0,
-     "evals": 94
+     "relWidth": 0.0000564001,
+     "evals": 38,
+     "stop": "converged"
     }
    },
    "oracle": [
@@ -799,26 +811,30 @@
     "lbsShrink": {
      "lower": 0.292893218813,
      "upper": 0.292909456369,
-     "relWidth": 0.0000554385,
-     "evals": 44
+     "relWidth": 0.0000554354,
+     "evals": 44,
+     "stop": "converged"
     },
     "dqsShrink": {
      "lower": 1.11022302463e-15,
-     "upper": 1.11033144484e-15,
-     "relWidth": 0.0000976563,
-     "evals": 73
+     "upper": 1.16573417586e-15,
+     "relWidth": 0.0000555112,
+     "evals": 55,
+     "stop": "converged"
     },
     "lbsVolume": {
-     "lower": 0.903731141573,
+     "lower": 0.903661554425,
      "upper": 0.903731141573,
-     "relWidth": 0,
-     "evals": 110
+     "relWidth": 0.0000769998,
+     "evals": 40,
+     "stop": "converged"
     },
     "dqsVolume": {
-     "lower": 0.986062541857,
+     "lower": 0.985974770232,
      "upper": 0.986062541857,
-     "relWidth": 0,
-     "evals": 89
+     "relWidth": 0.0000890122,
+     "evals": 37,
+     "stop": "converged"
     }
    },
    "oracle": [
@@ -1066,26 +1082,30 @@
     "lbsShrink": {
      "lower": 0.326969879914,
      "upper": 0.326997107766,
-     "relWidth": 0.0000832733,
-     "evals": 60
+     "relWidth": 0.0000832663,
+     "evals": 60,
+     "stop": "converged"
     },
     "dqsShrink": {
      "lower": 2.33146835171e-15,
-     "upper": 2.33165808709e-15,
-     "relWidth": 0.0000813802,
-     "evals": 133
+     "upper": 2.42861286637e-15,
+     "relWidth": 0.0000971445,
+     "evals": 79,
+     "stop": "converged"
     },
     "lbsVolume": {
-     "lower": 0.922299821204,
+     "lower": 0.922228906354,
      "upper": 0.922299821204,
-     "relWidth": 0,
-     "evals": 171
+     "relWidth": 0.0000768892,
+     "evals": 45,
+     "stop": "converged"
     },
     "dqsVolume": {
-     "lower": 0.988369509369,
+     "lower": 0.988284973986,
      "upper": 0.988369509369,
-     "relWidth": 0,
-     "evals": 120
+     "relWidth": 0.0000855301,
+     "evals": 39,
+     "stop": "converged"
     }
    },
    "oracle": [],
@@ -1277,26 +1297,30 @@
     "lbsShrink": {
      "lower": 0.357212390313,
      "upper": 0.357245764414,
-     "relWidth": 0.0000934293,
-     "evals": 67
+     "relWidth": 0.0000934206,
+     "evals": 67,
+     "stop": "converged"
     },
     "dqsShrink": {
      "lower": 6.66133814775e-16,
-     "upper": 6.66174472357e-16,
-     "relWidth": 0.0000610352,
-     "evals": 113
+     "upper": 7.49400541622e-16,
+     "relWidth": 0.0000832667,
+     "evals": 45,
+     "stop": "converged"
     },
     "lbsVolume": {
-     "lower": 0.915648154774,
+     "lower": 0.915569917115,
      "upper": 0.915648154774,
-     "relWidth": 0,
-     "evals": 224
+     "relWidth": 0.0000854451,
+     "evals": 57,
+     "stop": "converged"
     },
     "dqsVolume": {
-     "lower": 0.987505471116,
+     "lower": 0.987418214074,
      "upper": 0.987505471116,
-     "relWidth": 0,
-     "evals": 170
+     "relWidth": 0.0000883611,
+     "evals": 47,
+     "stop": "converged"
     }
    },
    "oracle": [

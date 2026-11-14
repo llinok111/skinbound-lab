@@ -417,6 +417,13 @@ export function encloseMax(f, opts = {}) {
   const tol = opts.tol ?? 1e-4;
   const maxEvals = opts.maxEvals ?? 20000;
   const safety = opts.safety ?? 2;
+  // Dimensionless floor for the relative stopping rule. All metrics here are
+  // ratios (radius/radius, volume/volume), so this floor carries NO length
+  // scale — it only stops the recursion on quantities that are structurally 0
+  // (DQS shrink is ~1e-16 noise) or that would otherwise stall on float
+  // cancellation. Disclosed in README "known limits".
+  const absFloor = opts.absFloor ?? 1e-12;
+  const mag = (a, b) => Math.max(Math.abs(a), Math.abs(b), absFloor);
 
   let evals = 0;
   const probeW = (t1 - t0) / probe;
@@ -434,14 +441,17 @@ export function encloseMax(f, opts = {}) {
   const upperOf = (c) => Math.max(c.fa, c.fb) + (L * (c.b - c.a)) / 2;
 
   let guard = 0;
+  let stop = "converged";
   while (guard++ < 200000) {
     let bi = -1, bu = -Infinity;
     for (let i = 0; i < cells.length; i++) {
       const u = upperOf(cells[i]);
       if (u > bu) { bu = u; bi = i; }
     }
-    const rel = (bu - lower) / Math.max(lower, 1e-300);
-    if (rel <= tol || evals >= maxEvals) break;
+    if (bu <= lower) { stop = "cell-bounds-closed"; break; }         // no cell can beat the best sample
+    const rel = (bu - lower) / mag(lower, bu);
+    if (rel <= tol) { stop = "converged"; break; }
+    if (evals >= maxEvals) { stop = "eval-budget"; break; }
     const c = cells[bi];
     const m = (c.a + c.b) / 2;
     const fm = f(m);
@@ -452,13 +462,14 @@ export function encloseMax(f, opts = {}) {
   }
   let upper = -Infinity;
   for (const c of cells) upper = Math.max(upper, upperOf(c));
-  return { lower, upper, width: upper - lower, relWidth: (upper - lower) / Math.max(lower, 1e-300), evals, lipschitz: L, cells: cells.length };
+  const width = upper - lower;
+  return { lower, upper, width, relWidth: width / mag(lower, upper), evals, lipschitz: L, cells: cells.length, stop };
 }
 
 /** enclose min f over [t0,t1] by maximizing -f with the same machinery */
 export function encloseMin(f, opts = {}) {
   const e = encloseMax((t) => -f(t), opts);
-  return { lower: -e.upper, upper: -e.lower, width: e.width, relWidth: e.relWidth, evals: e.evals, lipschitz: e.lipschitz, cells: e.cells };
+  return { lower: -e.upper, upper: -e.lower, width: e.width, relWidth: e.relWidth, evals: e.evals, lipschitz: e.lipschitz, cells: e.cells, stop: e.stop };
 }
 
 /** uniform sampling with the same Lipschitz-bound construction (baseline) */

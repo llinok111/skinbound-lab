@@ -6,48 +6,93 @@
   "cores": 4
  },
  "timeUnitMs": "milliseconds",
- "coldStartMs": 27.2846,
- "perMetricEvalMs": 0.16017,
- "repeats": 9,
+ "coldStartMs": 17.0535,
+ "adaptiveSweep6BatchMediansMs": [
+  32.2829,
+  32.5851,
+  30.268
+ ],
+ "adaptiveSweep6BatchSpreadMs": 2.3171,
+ "lipschitzAudit": [
+  {
+   "id": "twist2-60",
+   "probeMaxSlope": 0.258191,
+   "fineMaxSlope": 0.26174,
+   "ratioFineOverProbe": 1.01375
+  },
+  {
+   "id": "twist2-90",
+   "probeMaxSlope": 0.548699,
+   "fineMaxSlope": 0.555251,
+   "ratioFineOverProbe": 1.01194
+  },
+  {
+   "id": "twist2-120",
+   "probeMaxSlope": 0.89844,
+   "fineMaxSlope": 0.906763,
+   "ratioFineOverProbe": 1.00926
+  },
+  {
+   "id": "twist3-90",
+   "probeMaxSlope": 0.548699,
+   "fineMaxSlope": 0.555251,
+   "ratioFineOverProbe": 1.01194
+  },
+  {
+   "id": "twist-bend3",
+   "probeMaxSlope": 0.724728,
+   "fineMaxSlope": 0.759599,
+   "ratioFineOverProbe": 1.04812
+  },
+  {
+   "id": "twist-scrub2",
+   "probeMaxSlope": 2.25556,
+   "fineMaxSlope": 2.40501,
+   "ratioFineOverProbe": 1.06626
+  }
+ ],
+ "worstFineOverProbeSlopeRatio": 1.06626,
+ "perMetricEvalMs": 0.1672,
+ "repeats": 21,
  "adaptiveSweep6ScenariosMs": {
-  "n": 9,
-  "min": 33.0967,
-  "median": 34.1763,
-  "p95": 39.7783,
-  "max": 39.7783,
-  "mean": 35.2253,
-  "stddev": 2.14,
-  "relStddev": 0.0608
+  "n": 21,
+  "min": 32.0381,
+  "median": 33.5735,
+  "p95": 37.8555,
+  "max": 38.7087,
+  "mean": 34.5296,
+  "stddev": 2.0184,
+  "relStddev": 0.0585
  },
  "adaptiveSingleScenarioMs": {
-  "n": 9,
-  "min": 3.898,
-  "median": 4.0842,
-  "p95": 5.3,
-  "max": 5.3,
-  "mean": 4.19,
-  "stddev": 0.4072,
-  "relStddev": 0.0972
+  "n": 21,
+  "min": 3.4561,
+  "median": 3.5558,
+  "p95": 3.8394,
+  "max": 3.8503,
+  "mean": 3.6285,
+  "stddev": 0.1465,
+  "relStddev": 0.0404
  },
  "uniform4096SingleScenarioMs": {
   "n": 5,
-  "min": 332.2863,
-  "median": 335.9351,
-  "p95": 378.148,
-  "max": 378.148,
-  "mean": 344.7352,
-  "stddev": 17.1662,
-  "relStddev": 0.0498
+  "min": 328.8103,
+  "median": 329.4677,
+  "p95": 332.3155,
+  "max": 332.3155,
+  "mean": 330.2294,
+  "stddev": 1.3228,
+  "relStddev": 0.004
  },
  "volumeSweep12MinSweepsMs": {
   "n": 5,
-  "min": 326.8361,
-  "median": 332.5722,
-  "p95": 378.2506,
-  "max": 378.2506,
-  "mean": 342.057,
-  "stddev": 18.6036,
-  "relStddev": 0.0544
+  "min": 110.9691,
+  "median": 111.8507,
+  "p95": 138.7973,
+  "max": 138.7973,
+  "mean": 117.1553,
+  "stddev": 10.8308,
+  "relStddev": 0.0924
  },
  "lipschitzEstimated": 1.0974,
  "evalBudget": {
@@ -69,23 +114,26 @@
     "lower": 0.133974596216,
     "upper": 0.133982236814,
     "relWidth": 0.00005703,
-    "evals": 44
+    "evals": 44,
+    "stop": "converged"
    },
    "dqsShrink": {
-    "lower": 6.66133814775e-16,
-    "upper": 6.66174472357e-16,
-    "relWidth": 0.00006104,
-    "evals": 284
+    "lower": 4.4408920985e-16,
+    "upper": 5.27355936697e-16,
+    "relWidth": 0.00008327,
+    "evals": 78
    },
    "lbsVolumeRatio": {
-    "lower": 0.963148129013,
+    "lower": 0.963087400718,
     "upper": 0.963148129013,
-    "evals": 90
+    "evals": 39,
+    "stop": "converged"
    },
    "dqsVolumeRatio": {
-    "lower": 0.994624504188,
+    "lower": 0.994560271876,
     "upper": 0.994624504188,
-    "evals": 90
+    "evals": 36,
+    "stop": "converged"
    },
    "restVolume": 0.764754062303,
    "verts": 546,
@@ -100,23 +148,26 @@
     "lower": 0.292893218813,
     "upper": 0.292909456369,
     "relWidth": 0.00005544,
-    "evals": 44
+    "evals": 44,
+    "stop": "converged"
    },
    "dqsShrink": {
     "lower": 6.66133814775e-16,
-    "upper": 6.66174472357e-16,
-    "relWidth": 0.00006104,
-    "evals": 93
+    "upper": 7.49400541622e-16,
+    "relWidth": 0.00008327,
+    "evals": 46
    },
    "lbsVolumeRatio": {
-    "lower": 0.92779835618,
+    "lower": 0.927746165819,
     "upper": 0.92779835618,
-    "evals": 119
+    "evals": 40,
+    "stop": "converged"
    },
    "dqsVolumeRatio": {
-    "lower": 0.989546906393,
+    "lower": 0.989481077674,
     "upper": 0.989546906393,
-    "evals": 87
+    "evals": 37,
+    "stop": "converged"
    },
    "restVolume": 0.764754062303,
    "verts": 546,
@@ -131,23 +182,26 @@
     "lower": 0.5,
     "upper": 0.500026587371,
     "relWidth": 0.00005317,
-    "evals": 44
+    "evals": 44,
+    "stop": "converged"
    },
    "dqsShrink": {
-    "lower": 7.77156117238e-16,
-    "upper": 7.77196774819e-16,
-    "relWidth": 0.00005232,
-    "evals": 123
+    "lower": 6.66133814775e-16,
+    "upper": 7.49400541622e-16,
+    "relWidth": 0.00008327,
+    "evals": 52
    },
    "lbsVolumeRatio": {
-    "lower": 0.89299838943,
+    "lower": 0.892916750604,
     "upper": 0.89299838943,
-    "evals": 124
+    "evals": 43,
+    "stop": "converged"
    },
    "dqsVolumeRatio": {
-    "lower": 0.982906319774,
+    "lower": 0.982850883714,
     "upper": 0.982906319774,
-    "evals": 94
+    "evals": 38,
+    "stop": "converged"
    },
    "restVolume": 0.764754062303,
    "verts": 546,
@@ -162,23 +216,26 @@
     "lower": 0.292893218813,
     "upper": 0.292909456369,
     "relWidth": 0.00005544,
-    "evals": 44
+    "evals": 44,
+    "stop": "converged"
    },
    "dqsShrink": {
     "lower": 1.11022302463e-15,
-    "upper": 1.11033144484e-15,
-    "relWidth": 0.00009766,
-    "evals": 73
+    "upper": 1.16573417586e-15,
+    "relWidth": 0.00005551,
+    "evals": 55
    },
    "lbsVolumeRatio": {
-    "lower": 0.903731141573,
+    "lower": 0.903661554425,
     "upper": 0.903731141573,
-    "evals": 110
+    "evals": 40,
+    "stop": "converged"
    },
    "dqsVolumeRatio": {
-    "lower": 0.986062541857,
+    "lower": 0.985974770232,
     "upper": 0.986062541857,
-    "evals": 89
+    "evals": 37,
+    "stop": "converged"
    },
    "restVolume": 1.14713109345,
    "verts": 802,
@@ -193,23 +250,26 @@
     "lower": 0.326969879914,
     "upper": 0.326997107766,
     "relWidth": 0.00008327,
-    "evals": 60
+    "evals": 60,
+    "stop": "converged"
    },
    "dqsShrink": {
     "lower": 2.33146835171e-15,
-    "upper": 2.33165808709e-15,
-    "relWidth": 0.00008138,
-    "evals": 133
+    "upper": 2.42861286637e-15,
+    "relWidth": 0.00009714,
+    "evals": 79
    },
    "lbsVolumeRatio": {
-    "lower": 0.922299821204,
+    "lower": 0.922228906354,
     "upper": 0.922299821204,
-    "evals": 171
+    "evals": 45,
+    "stop": "converged"
    },
    "dqsVolumeRatio": {
-    "lower": 0.988369509369,
+    "lower": 0.988284973986,
     "upper": 0.988369509369,
-    "evals": 120
+    "evals": 39,
+    "stop": "converged"
    },
    "restVolume": 1.14713109345,
    "verts": 802,
@@ -223,24 +283,27 @@
    "lbsShrink": {
     "lower": 0.357212390313,
     "upper": 0.357245764414,
-    "relWidth": 0.00009343,
-    "evals": 67
+    "relWidth": 0.00009342,
+    "evals": 67,
+    "stop": "converged"
    },
    "dqsShrink": {
     "lower": 6.66133814775e-16,
-    "upper": 6.66174472357e-16,
-    "relWidth": 0.00006104,
-    "evals": 113
+    "upper": 7.49400541622e-16,
+    "relWidth": 0.00008327,
+    "evals": 45
    },
    "lbsVolumeRatio": {
-    "lower": 0.915648154774,
+    "lower": 0.915569917115,
     "upper": 0.915648154774,
-    "evals": 224
+    "evals": 57,
+    "stop": "converged"
    },
    "dqsVolumeRatio": {
-    "lower": 0.987505471116,
+    "lower": 0.987418214074,
     "upper": 0.987505471116,
-    "evals": 170
+    "evals": 47,
+    "stop": "converged"
    },
    "restVolume": 0.764754062303,
    "verts": 546,
@@ -250,6 +313,8 @@
  "notes": [
   "adaptive = branch-and-bound enclosure of the sweep extremum, driven by a numerically estimated Lipschitz bound (x2 safety factor); NOT a formal proof.",
   "uniform = the baseline sampling strategy in baseline/uniform-sweep.mjs; it yields a point estimate, and an enclosure only when handed the same Lipschitz bound.",
-  "perMetricEvalMs is one full LBS evaluation of the whole tube mesh (transform build + skin + ring statistics + volume)."
+  "perMetricEvalMs is one full LBS evaluation of the whole tube mesh (transform build + skin + ring statistics + volume).",
+  "The uniform baseline is handed the SAME numerically estimated Lipschitz constant as the certificate; the eval-count ratio compares sampling strategies under one shared bound, it is not an independently derived baseline rate.",
+  "lipschitzAudit re-measures max |df/dt| on a 2000-point grid (60x denser than the 33-point probe the bound is built from). ratioFineOverProbe <= 1 means the probe grid did not miss a steeper region."
  ]
 }
