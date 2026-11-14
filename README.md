@@ -56,7 +56,6 @@ Every group's relative standard deviation is below 10 %, so no number here needs
 Verification: **35 passed / 0 failed**, exit code 0, `node bench/verify.mjs`.
 
 ### The three independent oracles (`bench/verify.mjs`)
-
 1. **Closed-form trigonometry** — a ring whose child-bone weight is `w` and whose local
    twist is `θ` shrinks its radius by exactly `1 - sqrt((1-w)² + w² + 2w(1-w)cos θ)`; no
    mesh, no sampling and no shared constant with the renderer is involved (2880 pairs).
@@ -64,6 +63,11 @@ Verification: **35 passed / 0 failed**, exit code 0, `node bench/verify.mjs`.
    292 640 measured pairs drift by at most **5.995e-15** relative.
 3. **Brute force + golden-section polish** — 4096 uniform samples refined locally, used
    only to falsify the enclosure (it must contain the refined truth and stay tight).
+
+`node bench/falsify.mjs 20000` attacks the headline claim directly with its own sampling
+loop (it shares no code with the branch-and-bound path): **0/6 enclosure violations,
+0/6 vacuous rigs**, largest relative gap 9.343e-5. A 200 000-sample run of the same script
+(2 min) gives the identical verdict. Run it yourself before believing the table.
 
 ## 本轮创新
 
@@ -133,6 +137,7 @@ src/scenarios.mjs   the 6 deterministic rigs and their animation keys
 tools/gen-sample.mjs  -> data/rigs.json + data/reference.json (deterministic)
 baseline/uniform-sweep.mjs  the sampling baseline this project is measured against
 bench/verify.mjs    35 assertions, real values printed
+bench/falsify.mjs   adversarial attempt to break the enclosure (own sampling loop)
 bench/bench.mjs     timing, cold start, min/median/p95/stddev -> bench/result.json
 index.html + main.js  three.js view (pinned importmap), same core, live browser-vs-node diff
 ```
