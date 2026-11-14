@@ -183,5 +183,7 @@ console.log(`adaptive 1 scenario   : median=${out.adaptiveSingleScenarioMs.media
 console.log(`uniform 4096 baseline : median=${out.uniform4096SingleScenarioMs.median} ms relStddev=${(out.uniform4096SingleScenarioMs.relStddev * 100).toFixed(1)}%`);
 console.log(`volume 12 min-sweeps  : median=${out.volumeSweep12MinSweepsMs.median} ms relStddev=${(out.volumeSweep12MinSweepsMs.relStddev * 100).toFixed(1)}%`);
 console.log(`eval budget (${out.evalBudget.scenario}): adaptive ${out.evalBudget.adaptiveEvals} evals -> relWidth ${out.evalBudget.adaptiveRelWidth}; uniform needs ${out.evalBudget.uniformEvalsToReachSameWidth} evals -> ${out.evalBudget.evalCountRatio}x`);
-console.log(`headline: ${headline.map((h) => `${h.id} LBS<=${h.lbsShrink.upper.toFixed(6)} DQS<=${h.dqsShrink.upper.toExponential(2)}`).join(" | ")}`);
+// print every bound as a true ceiling, matching README's convention
+const ceilSig = (v, d = 3) => { const m = 10 ** (d - 1 - Math.floor(Math.log10(Math.abs(v)))); return Math.ceil(v * m) / m; };
+console.log(`headline: ${headline.map((h) => `${h.id} LBS<=${ceilSig(h.lbsShrink.upper, 7).toFixed(6)} DQS<=${ceilSig(h.dqsShrink.upper).toExponential(2)}`).join(" | ")}`);
 console.log("bench/result.json written");
