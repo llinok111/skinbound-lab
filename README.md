@@ -17,16 +17,6 @@ extremum via branch-and-bound with a Lipschitz bound, together with the evaluati
 it spent. The sweep metric is dimensionless (radius ratio, volume ratio), so the results
 are scale-free.
 
-Three *independent* oracles check it (see `bench/verify.mjs`):
-
-1. **Closed-form trigonometry** — a ring whose child-bone weight is `w` and whose local
-   twist is `θ` shrinks its radius by exactly `1 - sqrt((1-w)² + w² + 2w(1-w)cos θ)` and
-   no mesh, no sampling and no shared constant with the renderer is involved.
-2. **Rigidity as a property** — DQS must preserve *every pairwise distance inside a ring*;
-   292 640 measured pairs drift by at most **5.995e-15** relative.
-3. **Brute force + golden-section polish** — 4096 uniform samples refined locally, used
-   only to falsify the enclosure (it must contain the refined truth and stay tight).
-
 ## How to run (one command)
 
 ```bash
@@ -44,8 +34,7 @@ python3 -m http.server 4173     # then open http://localhost:4173/ (index.html +
 `src/core.mjs` is a pure ES module: `node -e "import('./src/core.mjs')"` succeeds with no
 DOM, no three.js, no IO and no environment access. `index.html` loads three.js from a
 pinned CDN importmap (`three@0.169.0`) and `main.js` consumes **the same** `src/core.mjs`
-in the browser, then differences its live numbers against the ones node baked into
-`data/reference.json` — the page prints `max |browser − node|`.
+in the browser, then differences it against node's `data/reference.json` (`max |browser − node|`).
 
 ## Evidence (`bench/result.json`, real runs, 2026-11-14)
 
@@ -65,6 +54,16 @@ evaluation **0.160 ms**, adaptive enclosure of all 6 sweeps median **34.18 ms**
 (relStddev 5.0 %), and 12 min-sweeps (volume, LBS+DQS) median **332.57 ms** (relStddev 5.4 %).
 Every group's relative standard deviation is below 10 %, so no number here needs a caveat.
 Verification: **35 passed / 0 failed**, exit code 0, `node bench/verify.mjs`.
+
+### The three independent oracles (`bench/verify.mjs`)
+
+1. **Closed-form trigonometry** — a ring whose child-bone weight is `w` and whose local
+   twist is `θ` shrinks its radius by exactly `1 - sqrt((1-w)² + w² + 2w(1-w)cos θ)`; no
+   mesh, no sampling and no shared constant with the renderer is involved (2880 pairs).
+2. **Rigidity as a property** — DQS must preserve *every pairwise distance inside a ring*;
+   292 640 measured pairs drift by at most **5.995e-15** relative.
+3. **Brute force + golden-section polish** — 4096 uniform samples refined locally, used
+   only to falsify the enclosure (it must contain the refined truth and stay tight).
 
 ## 本轮创新
 
